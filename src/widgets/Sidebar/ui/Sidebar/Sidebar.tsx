@@ -10,7 +10,7 @@ interface Props {
 
 export const Sidebar: FC<Props> = ({ className }: Props) => {
     const [collapsed, setCollapsed] = useState(false);
- 
+
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
@@ -20,7 +20,7 @@ export const Sidebar: FC<Props> = ({ className }: Props) => {
             <button onClick={onToggle}>toggle</button>
             <div className={cls.switcher}>
                 <ThemeSwitcher />
-                <LangSwitcher/>
+                <LangSwitcher />
             </div>
         </div>
     );
