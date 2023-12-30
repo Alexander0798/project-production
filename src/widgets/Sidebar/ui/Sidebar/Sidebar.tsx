@@ -17,11 +17,11 @@ export const Sidebar: FC<Props> = ({ className }: Props) => {
     };
 
     return (
-        <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
+        <div className={classNames(cls.Sidebar, { [cls.collapsed]: !collapsed }, [className])}>
             <Button theme={ThemeButton.CLEAR} onClick={onToggle}>
-                {collapsed ? ">>" : "<<"}
+                {collapsed ? "<<" : ">>"}
             </Button>
-            <div className={cls.switcher}>
+            <div className={classNames(cls.switcher, { [cls.column]: !collapsed }, [])}>
                 <ThemeSwitcher />
                 <LangSwitcher />
             </div>

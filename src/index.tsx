@@ -9,11 +9,11 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
-    <BrowserRouter>
-        <StrictMode>
+    <StrictMode>
+        <BrowserRouter>
             <ThemeProvider>
                 <App />
             </ThemeProvider>
-        </StrictMode>
-    </BrowserRouter>
+        </BrowserRouter>
+    </StrictMode>
 );
