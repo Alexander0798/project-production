@@ -20,7 +20,7 @@ module.exports = {
         ecmaVersion: "latest",
         sourceType: "module",
     },
-    plugins: ["@typescript-eslint", "react"],
+    plugins: ["@typescript-eslint", "react", "i18next"],
     rules: {
         indent: [2, 4],
         quotes: ["error", "double"],
@@ -31,6 +31,7 @@ module.exports = {
         "linebreak-style": ["error", "windows"],
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "warn",
+        "i18next/no-literal-string": ["error", {markupOnly: true}]
     },
     settings: {
         react: {
